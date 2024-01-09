@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+
+  app:
+    container_name: nc-app
+    image: nc-app
+    build:
+      context: .
+      dockerfile: Dockerfile.app
+    volumes:
+      - ./public:/opt/ncapp/public
+      - ./src:/opt/ncapp/src
